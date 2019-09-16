@@ -1,1 +1,1 @@
-# Javaコース課題 RaiseTech02
+# RaiseTech Javaコース2週目課題
