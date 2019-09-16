@@ -1,2 +1,1 @@
-# RaiseTech02
-For lear
+# Javaコース課題 RaiseTech02
