@@ -2,7 +2,10 @@ package assignment1;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Assignment1 {
@@ -10,21 +13,20 @@ public class Assignment1 {
 		helloWorld();
 		addOneToTen();
 		dayOfWeek();
-		judZeroOrOne();
+		judgeZeroOrOne(0);
 		arrayTest();
 	}
 
 	//HelloWorld出力、変数使用
 	private static void helloWorld() {
-		String greeting;
-		greeting = "HelloWorld";
+		String greeting = "HelloWorld";
 		System.out.println(greeting);
 	}
 
 	//1~10まで加算合計出力
 	private static void addOneToTen() {
 		int sum = 0;
-		for(int i = 1; i <= 10; i++){
+		for(int i = 0; i <= 10; i++){
 			sum += i;
 		}
 		System.out.println(sum);
@@ -38,8 +40,7 @@ public class Assignment1 {
 	}
 
 	//引数0なら偽、1なら真出力
-	private static void judZeroOrOne() {
-		int num = 1;
+	private static void judgeZeroOrOne(int num) {
 		if(num == 0) {
 			System.out.print("偽" + "\n");
 		}else if(num == 1){
@@ -52,9 +53,9 @@ public class Assignment1 {
 	//配列表示
 	private static void arrayTest() {
 		//List
-		String List[] = {"apple", "banana", "grape", "peach"};
-		for(int i = 0; i <= 3 ; i++) {
-			System.out.print(List[i] + "\n");
+		List<String> list = new ArrayList<String>(Arrays.asList("apple", "banana", "grape", "peach"));
+		for(int i = 0; i < list.size() ; i++) {
+			System.out.print(list.get(i) + "\n");
 		}
 
 		//Map
